@@ -1,0 +1,51 @@
+<?php
+include_once("connection.php");
+if(isset($_REQUEST["signin"]))
+{
+	$uname=$_REQUEST["username"];
+	$password=$_REQUEST["password"];
+	$type=$_REQUEST["ty"];
+	if($type=="f")
+	{
+		$login="select * from faculty where Username='$uname' and Password='$password'";
+		$res=mysql_query($login);
+		if($data=mysql_fetch_assoc($res))
+		{
+			$id=$data['FacID'];
+			header("Location:Faculty-Dashboard.php?id=$id");
+		}
+		else
+		{
+			header("Location:index.php?msg=err");
+		}
+	}
+	else if($type=="s")
+	{
+		$login="select * from student where Username='$uname' and Password='$password'";
+		$res=mysql_query($login);
+		if($data=mysql_fetch_assoc($res))
+		{
+			$id=$data['StudId'];
+			header("Location:Student-Dashboard.php?id=$id");
+		}
+		else
+		{
+			header("Location:index.php?msg=err");
+		}
+	}
+	else
+	{
+		$login="select * from admin where Username='$uname' and Password='$password'";
+		$res=mysql_query($login);
+		if($data=mysql_fetch_assoc($res))
+		{
+			$id=$data['AdminId'];
+			header("Location:Admin-Dashboard.php?id=$id");
+		}
+		else
+		{
+			header("Location:admin.php?err=0");
+		}
+	}
+}
+?>

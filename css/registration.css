@@ -1,0 +1,89 @@
+.input-group-text {
+	background: #000000 ;
+	color: white ;
+	width: 30%;
+  font-size: 14px;
+	position: absolute;
+	border-radius: 1px ;
+}
+
+h1{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 30px;
+}
+
+.input-user{
+	margin-left: 33%;
+	border: none;
+	width: 60%;
+	border-bottom: 2px solid #000000;
+	outline: none;
+	margin-top: 5px;
+}
+
+.input-user:focus{
+	box-shadow: none ;
+	border-bottom: 2px solid green;
+}
+
+.input-radio{
+	margin-top: 2%;
+	margin-left: 33%;
+	margin-bottom: 10px;
+}
+.input-file{
+	margin-left: 33%;
+	border: none;
+	width: 60%;
+	outline: none;
+	margin-top: 5px;
+}
+.input-select{
+	margin-left: 33%;
+	padding: 1.5px;
+	border: 2px solid black;
+	width: 60%;
+	outline: none;
+	margin-top: 5px;
+}
+.select{
+  margin:5px 0px 5px 5px;
+  background-color: white;
+  width: 425px;
+  font-size: 14px;
+}
+.link-main{
+  cursor:pointer;
+  user-select: none;
+}
+.link-main:active{
+  cursor:grabbing;
+  user-select: none;
+}
+.hide{
+  display: none;
+}
+@media screen and (max-width: 600px) {
+
+  .img div{
+	margin: -70px 0px 0px 150px;
+	}
+}
+.personal-one{
+	border:2px solid #484848;
+	margin:20px 10px;
+	padding: 5px;
+	border-radius: 5px;
+}
+.head-reg{
+	border:1px solid #484848;
+	background-color: #cccccc;
+	margin:-5px -5px 5px -5px;
+	padding-left:10px;
+}
+.margin-form{
+	margin-bottom: 5px;
+}
+.width-20{
+	width:20%;
+}
